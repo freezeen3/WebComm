@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Example-1</title>
+ </head>
+ <body>
+  <h1>You did it!</h1>
+  <button id="myButton">Click me!</button>
+  
+  <table id="outside">
+  <tr><td id="t1">one</td></tr>
+  <tr><td id="t2">two</td></tr>
+  <tr><td id="#weather-temp">Hola Weather</td></tr>
+  <script src="client_click.js"></script>
+
+  <button class="btn btn-success">Install</button>
+
+  // // Client Side Ajax Script
+  <script>
+      $('button').click(function () {
+          $.post('/page', {data: 'blah'}, function (data) {
+          console.log(data);
+        });
+      }, 'json');
+  </script>
+
+  </table>
+
+  <form action="http://localhost:8080/" method="POST">
+    <input type="text" id="nid" name="newID" placeholder="Enter your ID"/>
+    <input type="submit" value="Click here to submit the form"/>
+  </form>
+
+ </body>
+</html>
