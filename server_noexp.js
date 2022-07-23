@@ -8,7 +8,7 @@ const fs = require('fs');
 var url = require("url");
 
 const {spawn} = require('child_process');
-
+const spawn1 = require('child_process').exec;
 
 const requestHandler = (req, res) => {
   fs.readFile("index_noexp.html",(err, data) => {
@@ -26,6 +26,7 @@ const requestHandler = (req, res) => {
       });
       req.on('end', () => {
           console.log(parse(body));
+          console.log(parse(body).start);
           res.end('Thank you for submitting Joyce Leung, your secret information will be revealed in no time');
       });
     } else {
@@ -35,7 +36,29 @@ const requestHandler = (req, res) => {
 
   if (/python_run/i.test(req.url)) {
     console.log('Now running the dangerous python script');
-    const python = spawn('python', ['test.py']);
+    try {
+
+      const { spawn } = require('node:child_process');
+      // const ls = spawn('ls', ['-lh', '/usr']);
+      //
+      // ls.stdout.on('data', (data) => {
+      //   console.log(`stdout: ${data}`);
+      // });
+
+      // __dirname + '/index.html'
+      // '/Users/chanyuyan/nodetest/test.py'
+      var python = spawn('python', ['/Users/chanyuyan/nodetest/test.py']);
+      // var python = spawn1('python', [__dirname + '/test.py']);
+      python.stdout.on('data', (data) => {
+        console.log(`stdout: ${data}`);
+      })
+
+
+    } catch (error) {
+      console.error(error);
+    } finally {
+      console.log('Not sure what happened');
+    }
   }
 
   //
