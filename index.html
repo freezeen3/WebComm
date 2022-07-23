@@ -7,30 +7,47 @@
  </head>
  <body>
   <h1>You did it!</h1>
+  <h2>I am proud of you for coming to this stage. We are happy to announce the following functionalities for you</h2>
   <button id="myButton">Click me!</button>
-  
+
   <table id="outside">
   <tr><td id="t1">one</td></tr>
   <tr><td id="t2">two</td></tr>
   <tr><td id="#weather-temp">Hola Weather</td></tr>
   <script src="client_click.js"></script>
 
-  <button class="btn btn-success">Install</button>
+  <!-- <button class="btn btn-success">Install</button> -->
 
-  // // Client Side Ajax Script
-  <script>
+  <!-- Client Side Ajax Script*/ -->
+  <!-- <script>
       $('button').click(function () {
           $.post('/page', {data: 'blah'}, function (data) {
           console.log(data);
         });
       }, 'json');
-  </script>
+  </script> -->
 
   </table>
 
-  <form action="http://localhost:8080/" method="POST">
+  <form action="/formrecv_post" method="POST">
+    <input type="text" id="jid" name="jobID" placeholder="Enter your desired job type:"/>
+    <input type="date" id="start" name="trip-start"
+       value="2018-07-22"
+       min="2018-01-01" max="2018-12-31">
+    <input type="submit" value="Click here to submit the form" onclick="submitform()"/>
+  </form>
+
+  <button onclick="alert('Hello, this is my old-fashioned event handler!');">
+    Press me
+  </button>
+  <p>
+  <a href="/imgdl" download>Download your prize here!!</a>
+  </p>
+
+  <form action="/formrecv_get" method="GET">
     <input type="text" id="nid" name="newID" placeholder="Enter your ID"/>
-    <input type="submit" value="Click here to submit the form"/>
+    <input name="say" id="say" value="Hi">
+    <input type="submit" value="Click here to submit the form" onclick="submitform()"/>
   </form>
 
  </body>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Need to get things to work with vanilla nodejs</title>
+  <style>
+    h1 { font-size: 24pt;
+      background-color: DodgerBlue;
+      text-align: center;
+      width: 50%;
+      color: white;
+      font-weight: bold;}
+    p {color: #685206; font-family: 'Helvetica Neue', sans-serif;
+      font-size: 14px;
+      line-height: 24px;
+      margin: 0 0 24px;
+      text-align: justify;
+      text-justify: inter-word;
+      font-weight: bold;}
+  </style>
+ </head>
+ <body>
+   <h1>You did it!</h1>
+   <p>Please enter your secret dream job and the date on which you want it to start</p>
+   <form action="/formrecv_post" method="POST">
+     <p>
+       <input type="text" id="jid" name="jobID" placeholder="Enter your secret dream job:"/>
+       <input type="date" id="start" name="trip-start"
+          value="2022-07-22"
+          min="2018-01-01" max="2022-07-23">
+
+     </p>
+     <p>Any secret message you want to convey to Sam?</p>
+     <p>
+       <input type="text" id="smsg" name="Secret Message" placeholder="Enter your secret message:"/>
+       <input type="submit" value="Click here to submit" onclick=""/>
+     </p>
+   </form>
+
+
+  <a href="/python_run">Press this to trigger a dangerous python script on Sam's device!</a>
+ </body>
+
+</html>
