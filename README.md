@@ -22,7 +22,7 @@ https://stackoverflow.com/questions/71149620/how-to-run-nodejs-with-html-like-va
 https://stackoverflow.com/questions/72271561/how-to-submit-a-html-and-js-from-server-via-vanilla-nodejs-with-no-modules
 
 
-Run Python script
+Run Python script (consider using batch, or directly calling from nodejs)
 
 https://nodejs.org/api/child_process.html#event-spawn
 
