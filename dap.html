@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+  <script src="jquery-3.6.0.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gia_dap</title>
+  <style>
+
+    h1 { font-size: 24pt;
+      background-color: DodgerBlue;
+      text-align: center;
+      width: 50%;
+      color: white;
+      font-weight: bold;}
+    p { color: #685206; font-family: 'Helvetica Neue', sans-serif;
+      font-size: 14px;
+      line-height: 24px;
+      margin: 0 0 24px;
+      text-align: justify;
+      text-justify: inter-word;
+      font-weight: bold;}
+  </style>
+ </head>
+ <body>
+   <h1>Welcome to the GIA Data Analytics Portal</h1>
+   <p>Please specify the following constraints for the data you want:</p>
+   <form action="/formrecv_post" method="POST">
+     <p>
+       From
+       <input type="date" id="start_date" name="start_date"
+          value="2022-07-22"
+          min="2018-01-01" max="2022-07-28">
+       to
+       <input type="date" id="end_date" name="end_date"
+          value="2022-07-28"
+          min="2018-01-01" max="2022-07-28">
+       <br>
+       <label for="req_type">Request type:</label>
+       <select name="req_type" id="req_type">
+         <option value="po">PO</option>
+         <option value="payment">Payment</option>
+         <option value="user_profile">User_Profile</option>
+       </select>
+
+     <br><br>
+       <input type="submit" value="Click here to submit" onclick=""/>
+     </p>
+   </form>
+
+
+   <a href="/python_run">Press this to trigger a dangerous python script on Sam's device!</a>
+ </body>
+
+</html>
