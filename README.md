@@ -29,3 +29,11 @@ https://nodejs.org/api/child_process.html#event-spawn
 https://medium.com/swlh/run-python-script-from-node-js-and-send-data-to-browser-15677fcf199f
 
 https://stackoverflow.com/questions/50507531/is-there-a-way-to-launch-a-terminal-window-or-cmd-on-windows-and-pass-run-a-co (Run by calling cmd.exe)
+
+
+Communicate between nodejs and Python script
+
+https://www.youtube.com/watch?v=aoMzOgiE7rY 
+https://www.youtube.com/watch?v=hb1O6lCzarw (Pass data from python to node)
+
+
