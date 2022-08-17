@@ -36,4 +36,4 @@ Communicate between nodejs and Python script
 https://www.youtube.com/watch?v=aoMzOgiE7rY 
 https://www.youtube.com/watch?v=hb1O6lCzarw (Pass data from python to node)
 
-
+https://stackoverflow.com/questions/71633926/how-to-implement-two-way-communication-between-nodejs-and-a-python-subprocess (from node to python)
