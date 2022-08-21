@@ -18,7 +18,7 @@ app.listen(8080, '192.168.1.127', () => {
 
 // serve the homepage
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/jq.html');
 });
 
 app.use(express.json());
@@ -59,3 +59,8 @@ app.post('/page', function (req, res) {
     res.send('A message!');
     console.log('Got a message from client!');
 });
+
+app.get('/images/img1.jpg', function (req, res) {
+
+  res.sendFile(path.join(__dirname, 'images/img1.jpg'));
+})

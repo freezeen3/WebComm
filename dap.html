@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
  <head>
-  <script src="jquery-3.6.0.js"></script>
+  <!-- <script src="jquery-3.6.0.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+   $(document).ready(function() {
+     $(document).on('click', '#bttn1', function() {
+       alert('Hi');
+       $("#josh").html("Sammy");
+     });
+   });
+
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>gia_dap</title>
@@ -22,6 +32,7 @@
       font-weight: bold;}
   </style>
  </head>
+
  <body>
    <h1>Welcome to the GIA Data Analytics Portal</h1>
    <p>Please specify the following constraints for the data you want:</p>
@@ -50,6 +61,16 @@
 
 
    <a href="/python_run">Press this to trigger a dangerous python script on Sam's device!</a>
+
+   <br>
+
+   <a href="/display_output">See current pipeline output</a>
+
+   <br>
+
+   <button id="bttn1"> Change html content </button>
+   <p id="josh"> Joshie to be changed </p>
+
  </body>
 
 </html>
